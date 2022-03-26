@@ -1,0 +1,19 @@
+<!-- ejs tag to include the header section of the webpage -->
+<%- include('header'); -%>
+<div class=" index-div col-4 mx-auto" style="text-align:center;">
+  <h1><%= day %></h1>
+  <form action="/" method="post" class="row ">
+
+    <label class="heading" for="city-name">City</label>
+    <input type="text" class="form-control box" id="city-name" name="cityName" autofocus="true">
+
+    <div>
+      <button type="submit" class="btn btn-outline-primary ">Today's Forcast</button>
+    </div>
+
+
+  </form>
+</div>
+
+<!-- ejs tag to include the footer section of the webpage -->
+<%- include('footer'); -%>

@@ -1,0 +1,16 @@
+{
+  "name": "webdev",
+  "version": "1.0.0",
+  "description": "A small weather application",
+  "main": "\u001b[D\u001b[D\u001b[D\u001bapp\u001b[C\u001b[C\u001b[C\u001b.cjs\u001b[C\u001b[C\u001b[\u001b[C\u001b[C",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diksha Katyura",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  }
+}

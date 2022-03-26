@@ -1,0 +1,15 @@
+<!-- ejs tag to include the header section of the webpage -->
+
+<%- include('header'); -%>
+    <div class="temp-div col-4 mx-auto">
+      <form action="/" method="post">
+        <img class= image src= <%= iconURL %> alt= weatherimage>
+        <h1><%= temp %> &deg C </h1>
+        <h1><%= query %></h1>
+        <h3><%= weatherDiscription %> </h3>
+
+      </form>
+    </div>
+
+<!-- ejs tag to include the footer section of the webpage -->
+<%- include('footer'); -%>
