@@ -23,11 +23,13 @@ app.get("/", function(req, res) {
 
   const today = new Date();
   options = {
-    day:"numeric",
-    month:"short"
+    day: "numeric",
+    month: "short"
   };
-  const day = today.toLocaleDateString("en-US",options);
-  res.render("index",{day: day});
+  const day = today.toLocaleDateString("en-US", options);
+  res.render("index", {
+    day: day
+  });
 });
 
 
@@ -48,21 +50,28 @@ app.post("/", function(req, res) {
 
       const weatherData = JSON.parse(data);
 
-      const temp = weatherData.main.temp;
-
-      const weatherDiscription = weatherData.weather[0].description;
-
-      const icon = weatherData.weather[0].icon;
-
-      const iconURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+      if (weatherData.cod === 200) {
 
 
-      res.render("temp", {
-        query: query,
-        temp: temp,
-        weatherDiscription: weatherDiscription,
-        iconURL: iconURL
-      });
+        const temp = weatherData.main.temp;
+
+        const weatherDiscription = weatherData.weather[0].description;
+
+        const icon = weatherData.weather[0].icon;
+
+        const iconURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+
+
+        res.render("temp", {
+          query: query,
+          temp: temp,
+          weatherDiscription: weatherDiscription,
+          iconURL: iconURL
+        });
+
+      } else {
+        res.render("error");
+      }
 
     });
 

@@ -4,8 +4,13 @@ body {
   background-color: #CFF1EF;
 }
 
+.panda p,.heading, .error-head{
+  font-size: 4rem;
+  color: #BE79DF;
+  font-family: "Dela Gothic One";
+}
 
-h1,h3,.heading {
+h1,h3{
    margin-top: 2em;
    color: #BE79DF;
    font-size: 3rem;
@@ -13,32 +18,34 @@ h1,h3,.heading {
    font-family: "Dela Gothic One";
 }
 
+.heading {
+  font-size: 3.4rem;
+  font-weight: bolder;
+}
 
 .index-div{
   margin-top: 400px;
 }
 
-
-.heading{
-  font-size: 3.4rem;
-  font-weight: bolder;
-}
-
-
 .btn,.box,.image{
   margin-top: 2em;
 }
-
 
 .btn:hover{
   background-color: #BE79DF;
 }
 
+.error-div{
+  text-align: center;
+}
+
+.error-head{
+  font-size: 5rem;
+}
 
 .footer-padding {
 	padding-bottom: 60px;
 }
-
 
 .footer {
 	position: absolute;
